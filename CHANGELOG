@@ -1,0 +1,20 @@
+Changes made before source code was integrated into Git version
+control. Changes from final `CHANGELOG` documented onwards would
+be documented in commit history.
+
+- 2025-09-24: Initial release
+
+- 2025-09-24 (2nd):
+  - Fixed bugs where non-blocking event loop causes files to be
+    processed repeatedly; now uses synchronous file system calls
+    which mitigates the issue.
+  - Allows downloads to be organized in a specified output directory.
+  - Changed separators between artist, title, and album of unicode (U+200E)
+    rather than commonly used `-`es to avoid conflict with content.
+ 
+- 2025-09-25:
+  - Remove explicit requirement to exit process where an error has been
+    thrown to prevent blocking the whole download process.
+  - Strip more async operations down into synchronous ones to prevent
+    race conditions as previously observed.
+ 
