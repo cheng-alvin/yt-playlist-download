@@ -12,5 +12,8 @@ $ node song-download.js <YouTube Music Playlist URL>
 
 **Note:** The output directory is set to `./downloaded_songs/` by default, or as specified in the `outDir` variable, not to be confused with `outputDir` denoting the directory for the output of `yt-dlp` (really badly named).
 
+### Known issues
+Arbitrary artist/album names containing special escape characters reserved in `bash`, or `zsh` such as `$` appear to be problematic. Previously observed error with *"Ke$ha"* where `ffmpeg` was unable to read file name containing `$`. `ffmpeg` or `exec()` seems to be automatically filters special characters, for security reasons. The impact of other escaping characters are unknown.
+
 ---
 *Previous source code has been hosted outside of a version control system [here](https://gist.github.com/cheng-alvin/3904f2da19b054d2f6dda7a8a8782670), previous changes to code may be found in [`CHANGELOG`](https://github.com/cheng-alvin/yt-playlist-download/blob/main/CHANGELOG)*
