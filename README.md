@@ -7,7 +7,7 @@ The commands for `yt-dlp` and `ffmpeg` can be modified to suit needs and environ
 
 ### Usage
 ``` sh
-$ node yt-song-download.js <YouTube Music Playlist URL>
+$ node yt-playlist-download.js <YouTube Music Playlist URL>
 ```
 
 **Note:** The output directory is set to `./downloaded_songs/` by default, or as specified in the `outDir` variable, not to be confused with `outputDir` denoting the directory for the output of `yt-dlp` (really badly named).
