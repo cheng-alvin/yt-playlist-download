@@ -13,44 +13,6 @@
  * @note The output directory is set to `./downloaded_songs/` by default and
  * can be modified below where required.
  *
- * @license MIT
- * Copyright (c) 2025 Alvin Cheng <eventide1029@gmail.com>
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- *
- * @changelog
- * - 2025-09-24: Initial release
- *
- * - 2025-09-24 (2nd):
- *   - Fixed bugs where non-blocking event loop causes files to be
- *     processed repeatedly; now uses synchronous file system calls
- *     which mitigates the issue.
- *   - Allows downloads to be organized in a specified output directory.
- *   - Changed separators between artist, title, and album of unicode (U+200E)
- *     rather than commonly used `-`es to avoid conflict with content.
- *
- * - 2025-09-25:
- *    - Remove explicit requirement to exit process where an error has been
- *      thrown to prevent blocking the whole download process.
- *    - Strip more async operations down into synchronous ones to prevent
- *      race conditions as previously observed.
- *
  * @note This script is designed for macOS; it may work on Linux but is not
  * guaranteed to do so. Windows is also unsupported due to its deviation from
  * unix-like shell standards.
