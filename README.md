@@ -11,3 +11,6 @@ $ node song-download.js <YouTube Music Playlist URL>
 ```
 
 **Note:** The output directory is set to `./downloaded_songs/` by default, or as specified in the `outDir` variable, not to be confused with `outputDir` denoting the directory for the output of `yt-dlp` (really badly named).
+
+---
+*Previous source code has been hosted outside of a version control system [here](https://gist.github.com/cheng-alvin/3904f2da19b054d2f6dda7a8a8782670), previous changes to code may be found in [`CHANGELOG`](https://github.com/cheng-alvin/yt-playlist-download/blob/main/CHANGELOG)*
